@@ -66,6 +66,7 @@ const TitleBar = ({
           {
             vertical && hasIcon && <Logo src={iconSrc} hasTitle={hasTitle}>{icon}</Logo>
           }
+          {children}
           <Title
             focused={focused}
             hasIcon={hasIcon}
@@ -73,7 +74,6 @@ const TitleBar = ({
           >
             {title}
           </Title>
-          {children}
           {!isDarwin && controlsRight && (
             <WindowControls
               focused={focused}
